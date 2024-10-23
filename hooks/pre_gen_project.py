@@ -1,14 +1,14 @@
 import os
 import sys
 
-project_slug = "{{ cookiecutter.project_slug }}"
+project_name = "{{ cookiecutter.project_name }}"
 
 ERROR_COLOR = "\x1b[31m"
 MESSAGE_COLOR = "\x1b[34m"
 RESET_ALL = "\x1b[0m"
 
-if project_slug.startswith("x"):
-   print(f"{ERROR_COLOR}ERROR: {project_slug=} is not a valid name for this template.{RESET_ALL}")
+if ' ' in project_name:
+   print(f"{ERROR_COLOR}ERROR: {project_name=} is not a valid name for this template.{RESET_ALL}")
 
    sys.exit(1)
 
